@@ -1,0 +1,49 @@
+requirement = Tkinter + meteo france api
+
+une fenêtre avec 2 frames:
+
+1 Frame = choix de l'utilisateur
+1 Frame = canvas avec carte de france == carte des régions
+
+2 options = température et vitesse du vent
+ = radio buttons
+
+
+ choix utlisateur appelle fonctions get de l'api
+ récupère les données et les affiches
+
+ ------------
+ sur la carte
+ - petite légende:
+     - un carré avec couleur = couleur choisir par utilisateur
+- sur chaque région : un polygone : bind = affiche infos complémentaire = vitesse du vent
+température précise, temps: pluvieux ou autre et éventuelles perturbations
+
+
+----------------Fonctions pour les classes
+
+class Meteo App:
+ - fontion run
+  - fonction clique x pour fermer la fenêtre
+ - fonction slect color : renvoie string avec couleur
+ - fonction moyenne_temp_regions : récupère temp villes proximité (avec tests sur nom_reg) --> renvoie température -> passe à select color
+
+
+
+algo affiche intempéries:
+ -- si k différent de None == évènement produit
+
+    liste de tous les évènement possibles:
+        - si ça tombe sur élément connu : continue
+        
+
+ structure
+
+
+ root
+  |
+  -------- print info metropole 
+  --------calc moyenne temp
+  ----------moyenne temp_region
+  ---
+   --- get infos metropole
